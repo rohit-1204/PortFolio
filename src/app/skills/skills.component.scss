@@ -1,0 +1,7 @@
+
+@keyframes fill-progress {
+    0% { width: 0; }
+}
+.progress-bar.running {
+    animation: fill-progress 2s linear forwards;
+}

@@ -1,0 +1,29 @@
+/* Add this to your component's CSS or SCSS file */
+.fa,.fas {
+  color: gray; 
+  transition: color 0.3s ease; 
+  
+  &:hover {
+    color: green; 
+    cursor:pointer
+  }
+}
+.fa-linkedin {
+color:rgb(19, 106, 150);
+}
+.fa-github  {
+    color:black
+}
+.fab.fa-instagram {
+    color: #bc2a8d; 
+}
+.fab.fa-whatsapp {
+    color: green; 
+}
+.fab.fa-telegram {
+    color: #0088cc; 
+}
+.fab.fa-gitlab {
+    color: #fc6d26; 
+  }
+  

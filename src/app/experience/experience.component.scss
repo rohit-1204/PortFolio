@@ -1,0 +1,23 @@
+.popover {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the popover trigger */
+.popover-trigger {
+    position: relative; /* Important for positioning the popover */
+    cursor: pointer; /* Change cursor to indicate hover effect */
+}
+
+/* Style for the bottom-right corner */
+.popover-trigger:hover .popover {
+    display: block;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, 5px); /* Adjust the 5px value to control the distance from the corner */
+}

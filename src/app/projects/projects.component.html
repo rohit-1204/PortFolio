@@ -1,0 +1,17 @@
+<div class="container m-5">
+  <div class="row ">
+    <div class="col-4 mb-4" *ngFor="let project of projects">
+      <!-- Replace the content below with the project data you want to display -->
+      <div class="card card-shake">
+        <img class="card-img-top" src="./../../assets/app.jpg" width="200px" height="180px" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.name }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          <div class="text-center">
+            <a href="#" class="btn btn-outline-success"><i class="fas fa-code me-2"></i>Open Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
