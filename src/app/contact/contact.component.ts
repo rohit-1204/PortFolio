@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiServiceService } from '../services/api-service.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -9,11 +10,11 @@ import { Router } from '@angular/router';
 export class ContactComponent {
   contactForm: FormGroup;
   showSuccess = false;
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private fb: FormBuilder, private router: Router, private apiService: ApiServiceService) { }
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
+      firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
@@ -26,6 +27,7 @@ export class ContactComponent {
     if (this.contactForm.valid) {
       this.showSuccess = true
       console.log(this.contactForm.value);
+      this.apiService.contact(this.contactForm.value)
       setTimeout(() => {
         this.showSuccess = false
         this.contactForm.reset();

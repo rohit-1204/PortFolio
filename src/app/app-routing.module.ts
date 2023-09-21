@@ -7,6 +7,9 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 
 const routes: Routes = [
@@ -19,6 +22,21 @@ const routes: Routes = [
   { path: 'project', component: ProjectsComponent },
   { path: 'education', component: EducationComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'admin', component: AdminLoginComponent },
+  {
+    path: 'contact-details', component: ContactDetailsComponent,
+  },
+  {
+    path: 'dashboard', component: DashboardComponent,
+    children: [
+      {
+        path: 'contact-details',
+        component: ContactDetailsComponent
+      },
+
+      // Add more child routes as needed
+    ],
+  },
 
 ];
 

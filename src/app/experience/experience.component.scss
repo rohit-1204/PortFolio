@@ -21,3 +21,54 @@
     left: 100%;
     transform: translate(-100%, 5px); /* Adjust the 5px value to control the distance from the corner */
 }
+.circle {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    background-color: #64c3d1;
+    border-radius: 50%; /* Makes it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999999999 !important;  }
+  
+  /* Assuming you are using Font Awesome for the handshake icon */
+  .fa-handshake ,.fa-upload{
+    font-size: 25px; /* Adjust the icon size as needed */
+    color: white; /* Adjust the icon color as needed */
+  }
+  
+  
+  .line {
+    width: 1px; /* Adjust the width of the line as needed */
+    height: 59%; /* Make the line stretch to the height of the container */
+    background-color: #333; /* Adjust the color of the line as needed */
+    position: absolute; /* Position the line absolutely */
+    transform: translateX(-50%); /* Center the line horizontally */
+    margin-left: 24px;
+    z-index: 5;
+  }
+  .column{
+    z-index: 99999999999999 !important;
+  }
+  .inline {
+    display: inline; /* Make the elements display inline */
+    margin-right: 10px; /* Add some spacing between the elements (adjust as needed) */
+  }
+  .companeyTitle{
+    cursor: pointer;
+  }
+  .square{
+    border: 1px solid black;
+    z-index: 999999999999 !important;
+    height: 25px;
+    width: 45px;
+    background-color: #a2a9b4;
+    color: white;
+    border-radius: 3px;
+  }
+  .logo{
+    margin-right: 10px
+  }
+  .experience{
+    margin-bottom: 10px;
+  }

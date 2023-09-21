@@ -11,4 +11,7 @@ export class ExperienceComponent {
 
 
   }
+  openCompaney() {
+    window.open("https://www.orektic.com/", "_blank");
+  }
 }
