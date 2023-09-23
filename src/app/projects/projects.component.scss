@@ -29,4 +29,15 @@
     }
   }
 
-  
+  @media (max-width: 768px) { /* Adjust the maximum width as needed */
+     .apps {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .experience .card .alert {
+      flex-grow: 1;
+      flex-basis: auto;
+      width: auto;
+    }
+  }

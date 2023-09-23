@@ -27,3 +27,51 @@ color:rgb(19, 106, 150);
     color: #fc6d26; 
   }
   
+/* Default styling for larger screens */
+.row-icons {
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap to the next line when needed */
+}
+
+.col-icon {
+  flex: 1;
+  max-width: 16.666%; /* Set a maximum width for each column (6 columns in total) */
+  text-align: center;
+  margin-bottom: 10px; /* Add spacing between icons */
+}
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  .row-icons {
+    flex-direction: column; /* Display icons in a single column */
+  }
+
+  .col-icon {
+    max-width: 100%; /* Allow each column to take up the full width in mobile view */
+    margin-bottom: 0; /* Remove spacing between icons */
+  }
+}
+
+
+   @media (max-width: 768px) {
+    .about,
+    .basic-info {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .about-me,
+    .basic-info {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  .table{
+    width :200px;
+  }
+  
+
+  
+
+  

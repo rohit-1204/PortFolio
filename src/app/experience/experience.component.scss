@@ -72,3 +72,17 @@
   .experience{
     margin-bottom: 10px;
   }
+  @media (max-width: 768px) { /* Adjust the maximum width as needed */
+    .experience .main-card  {
+      margin: 10px !important; /* Remove margin for the card */
+          }
+  }
+  @media (max-width: 768px) { /* Adjust the maximum width as needed */
+    .designation {
+      margin-left: 30px !important;    }
+  }
+  @media (min-width: 768px) { /* Adjust the maximum width as needed */
+    .experience .main-card {
+      margin: 52px !important; /* Remove margin for the card */
+    }
+  }

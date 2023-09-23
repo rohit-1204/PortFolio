@@ -1,8 +1,8 @@
 <div class="m-5">
     <div class="card border-secondary mb-3">
         <div class="card-body text-secondary">
-            <div class="row">
-                <div class="col">
+            <div class="about row">
+                <div class="about-me col">
                     <h5 class="card-title text-dark">About Me</h5>
                     <ul class=" list-style-circle">
                         <li>Software Developer with 2+ years of experience.</li>
@@ -14,35 +14,49 @@
                         problems with a smile and solve them as soon as possible. Very calculated about the time I spend
                         and work I do.</p>
                 </div>
-                <div class="col">
+                <div class="basic-info col">
                     <h5 class="card-title text-dark">Basic Information</h5>
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <th scope="row">DATE OF BIRTH :</th>
-                                <td>27 Jully 2000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">EMAIL :</th>
-                                <td>rohitpathare1204@gmail.com<i class="fas fa-clipboard"
-                                        (click)="copyToClipBoard('email')"></i></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">PHONE :</th>
-                                <td>+91 9561661204 <i class="fas fa-clipboard" (click)="copyToClipBoard('phone')"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ADDRESS :</th>
-                                <td>A/P- Nighoj Tal-Parner Dist-ANagar Shirur road <i class="fas fa-clipboard"
-                                        (click)="copyToClipBoard('address')"></i></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">LANGUAGES :</th>
-                                <td>Marath-, English,Hindi</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h6 class="font-weight-bold">DATE OF BIRTH :</h6>
+                            27 Jully 2000
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="font-weight-bold">PHONE :</h6> +91 9561661204
+                            <ng-template #popContent>
+                                <div class="popover-content">
+                                    copied !
+                                </div>
+                            </ng-template>
+                            <i title="copy" #phonePopover="ngbPopover" [ngbPopover]="popContent" popoverTitle=""
+                                class="fas fa-clipboard ms-1" (click)="copyToClipBoard('phone',phonePopover)"></i>
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="font-weight-bold">EMAIL :</h6>
+                            <ng-template #popContent>
+                                <div class="popover-content">
+                                    copied !
+                                </div>
+                            </ng-template>
+                            rohitpathare1204@gmail.com<i title="copy" #emailPopover="ngbPopover"
+                                [ngbPopover]="popContent" popoverTitle="" class="fas fa-clipboard ms-1"
+                                (click)="copyToClipBoard('email',emailPopover)"></i>
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="font-weight-bold">HOME ADDRESS :</h6>
+                            <ng-template #popContent>
+                                <div class="popover-content">
+                                    copied !
+                                </div>
+                            </ng-template> A/P- Nighoj Tal-Parner Dist-ANagar Shirur
+                            road <i class="fas fa-clipboard ms-1" title="copy" #p="ngbPopover" [ngbPopover]="popContent"
+                                popoverTitle="" (click)="copyToClipBoard('address',p)"></i>
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="font-weight-bold">LANGUAGES :</h6> Marath, English,Hindi
+                        </li>
+                    </ul>
+
                 </div>
 
             </div>
@@ -52,43 +66,68 @@
     </div>
     <div class="card border-secondary mb-3">
         <div class="card-body text-secondary">
-            <div class="row">
-                <div class="col-2">
-                    <h5 class="card-title text-dark">Fallow Me</h5>
+            <div class="row row-icons">
+                <div class=" col-icons">
+                    <h5 class="card-title text-dark inline-text">Fallow Me</h5>
                 </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col-1 ">
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                        </div>
-                        <div class="col-1">
-                            <a href="https://github.com/RohitPathare1" target="_blank">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                        </div>
-                        <div class="col-1">
-                            <a href="https://gitlab.com/orektic-rohit-pathare" target="_blank">
-                                <i class="fab fa-gitlab fa-2x"></i>
+                <div class="col col-icons">
+                    <div class="">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="border-0">
+                                        <div class=" ">
+                                            <a href="https://www.linkedin.com/" target="_blank">
+                                                <i class="fab fa-linkedin fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="border-0">
+                                        <div class="">
+                                            <a href="https://github.com/RohitPathare1" target="_blank">
+                                                <i class="fab fa-github fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="border-0">
+                                        <div class="col-2">
+                                            <a href="https://gitlab.com/orektic-rohit-pathare" target="_blank">
+                                                <i class="fab fa-gitlab fa-2x"></i>
 
-                            </a>
-                        </div>
-                        <div class="col-1">
-                            <a href="https://wa.me/your-instagram" target="_blank">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                        </div>
-                        <div class="col-1">
-                            <a href="https://wa.me/your-whatsapp-number" target="_blank">
-                                <i class="fab fa-whatsapp fa-2x"></i>
-                            </a>
-                        </div>
-                        <div class="col-1">
-                            <a href="https://wa.me/your-telegram-number" target="_blank">
-                                <i class="fab fa-telegram fa-2x"></i>
-                            </a>
-                        </div>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="border-0">
+                                        <div class="col-2">
+                                            <a href="https://wa.me/your-instagram" target="_blank">
+                                                <i class="fab fa-instagram fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="border-0">
+                                        <div class="col-2">
+                                            <a href="https://wa.me/your-whatsapp-number" target="_blank">
+                                                <i class="fab fa-whatsapp fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="border-0">
+                                        <div class="col-2">
+                                            <a href="https://wa.me/your-telegram-number" target="_blank">
+                                                <i class="fab fa-telegram fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+
+
+
                     </div>
                 </div>
 

@@ -1,79 +1,55 @@
-<nav class="navbar navbar-light navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-light navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;"> 
+<div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="isCollapsed = !isCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto container-fluid">
-                <li class="nav-item me-4">
-                    <a class="nav-link active" [routerLink]="['/home']"
-                        routerLinkActive="active text-warning border-danger border-bottom">Home</a>
-                </li>
-                <li class="nav-item me-4">
-                    <a class="nav-link active" [routerLink]="['/about']"
-                        routerLinkActive="active text-warning border-danger border-bottom">About</a>
-                </li>
-                <li class="nav-item me-4">
-                    <a class="nav-link active" [routerLink]="['/experiance']"
-                        routerLinkActive="active text-warning border-danger border-bottom">Experience </a>
-                </li>
-                <li class="nav-item me-4">
-                    <a class="nav-link active" [routerLink]="['/skills']"
-                        routerLinkActive="active text-warning border-danger border-bottom">Skills</a>
-                </li>
-                <li class="nav-item me-4">
-                    <a class="nav-link" [routerLink]="['/project']"
-                        routerLinkActive="active text-warning border-danger border-bottom">Projects</a>
-                </li>
-                <li class="nav-item me-4">
-                    <a class="nav-link" [routerLink]="['/education']"
-                        routerLinkActive="active text-warning border-danger border-bottom">Education</a>
-                </li>
-                <li class="nav-item me-4">
-                    <a class="nav-link" [routerLink]="['/contact']"
-                        routerLinkActive="active text-warning border-danger border-bottom">Contact Me</a>
-                </li>
-            </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav ml-auto container-fluid">
+            <li class="nav-item me-4">
+                <a class="nav-link active" [routerLink]="['/home']"
+                    routerLinkActive="active text-warning border-danger border-bottom">Home</a>
+            </li>
+            <li class="nav-item me-4">
+                <a class="nav-link active" [routerLink]="['/about']"
+                    routerLinkActive="active text-warning border-danger border-bottom">About</a>
+            </li>
+            <li class="nav-item me-4">
+                <a class="nav-link active" [routerLink]="['/experiance']"
+                    routerLinkActive="active text-warning border-danger border-bottom">Experience </a>
+            </li>
+            <li class="nav-item me-4">
+                <a class="nav-link active" [routerLink]="['/skills']"
+                    routerLinkActive="active text-warning border-danger border-bottom">Skills</a>
+            </li>
+            <li class="nav-item me-4">
+                <a class="nav-link" [routerLink]="['/project']"
+                    routerLinkActive="active text-warning border-danger border-bottom">Projects</a>
+            </li>
+            <li class="nav-item me-4">
+                <a class="nav-link" [routerLink]="['/education']"
+                    routerLinkActive="active text-warning border-danger border-bottom">Education</a>
+            </li>
+            <li class="nav-item me-4">
+                <a class="nav-link" [routerLink]="['/contact']"
+                    routerLinkActive="active text-warning border-danger border-bottom">Contact Me</a>
+            </li>
+        </ul>
 
-            <form class="form-inline my-2 my-lg-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        </div>
-                        <div class="col-sm">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                    <div class="col-sm">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+</div>
 </nav>
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" >Your Logo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto"> 
-                <li class="nav-item">
-    <a class="nav-link" >Home</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" >About</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" >Services</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" >Contact</a>
-</li>
-</ul>
-</div>
-</div>
-</nav> -->

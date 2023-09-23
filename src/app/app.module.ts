@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     ToastrModule.forRoot(),
-    NgbModule
+    NgbModule, NgbTooltipModule
 
   ],
   providers: [],
