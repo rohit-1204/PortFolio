@@ -1,42 +1,38 @@
 <div>
-    <h1>Contacts Details</h1>
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title text-center text-dark"> <i class="fas fa-user"></i>
+                Contact Details</h5>
+        </div>
+    </div>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">ID</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Message</th>
-
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>98765432344</td>
-                <td>hello this is test msg</td>
+            <tr *ngFor="let contact of contactList; index as i">
+                <th scope="row">{{ i +1}}</th>
+                <td>{{contact.Id}}</td>
+                <td>{{contact.firstName}}</td>
+                <td>{{contact.lastName}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phone}}</td>
+                <td>{{contact.message}}</td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteContact(contact)">Delete</button>
+                </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>98765432344</td>
-                <td>hello this is test msg</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>98765432344</td>
-                <td>hello this is test msg</td>
-            </tr>
+
         </tbody>
     </table>
+    <button [routerLink]="['/dashboard']" type="button" class="btn btn-outline-secondary">Back To Dashboard</button>
+
 </div>

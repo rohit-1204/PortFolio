@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiServiceService } from '../services/api-service.service';
+import { ApiService } from '../services/api-service.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -10,7 +10,7 @@ import { ApiServiceService } from '../services/api-service.service';
 export class ContactComponent {
   contactForm: FormGroup;
   showSuccess = false;
-  constructor(private fb: FormBuilder, private router: Router, private apiService: ApiServiceService) { }
+  constructor(private fb: FormBuilder, private router: Router, private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({

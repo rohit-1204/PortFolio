@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiServiceService } from '../services/api-service.service';
+import { ApiService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +7,7 @@ import { ApiServiceService } from '../services/api-service.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  constructor(private apiService: ApiServiceService) {
+  constructor(private apiService: ApiService) {
     this.getContacts()
   }
   async getContacts() {

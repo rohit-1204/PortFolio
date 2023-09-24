@@ -6,31 +6,35 @@ import { ToastrService } from 'ngx-toastr';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiServiceService {
+export class ApiService {
   contactList: void[];
 
   constructor(private api: AngularFirestore, private toaster: ToastrService, private router: Router) { }
-
+  // add contact
   contact(record: any) {
-    record['Id'] = this.api.createId()
+    // record['Id'] = this.api.createId()
     this.api.collection('Contacts').add(record).then(() => {
       this.toaster.success('Contact Added Successfully', 'Contact Details');
     }).catch(err => {
       this.toaster.error(err.message, 'Contact Details');
     })
   }
+  // get contacts
   async getContacts() {
-    let result = await this.api.collection('Contacts').snapshotChanges();
-    result.subscribe((responce => {
-      this.contactList = responce.map((e: any) => {
-        const data = e.payload.docs.data();
-        data.id = e.payload.doc.id;
-        return data;
-      })
-    }))
-    return this.contactList;
+    return await this.api.collection('Contacts').snapshotChanges();
+
   }
+  // get contact
   getContact(id: string) {
     return this.api.collection('/Contacts').doc(id).snapshotChanges();
+  }
+
+  // delete contact
+  delete(contact: any) {
+    return this.api.collection('/Contacts').doc(contact.id).delete().then(() => {
+      this.toaster.warning('Contact Deleted Successfully', 'Contact Delete');
+    }).catch(err => {
+      this.toaster.error(err.message, 'Contact Delete');
+    })
   }
 }

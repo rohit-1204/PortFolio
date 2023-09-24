@@ -18,12 +18,14 @@ export class AdminLoginComponent {
       userName: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
+    let userToken = sessionStorage.getItem('userToken');
+    if (userToken == 'true') {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   Login() {
     if (this.contactForm.valid) {
-      this.showSuccess = true
-      console.log(this.contactForm.value);
       this.auth.adminLogin(this.contactForm.value.userName, this.contactForm.value.password)
     }
   }

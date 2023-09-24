@@ -11,10 +11,10 @@ export class EducationComponent {
     {
       imgSrc: 'image1.jpg',
       label: 'Post Graduation',
-      duration: '2010-12',
+      duration: '2022-23',
       details: {
         qualification: 'MCA (Master of Computer Application)',
-        collegeName: 'C T Bora College',
+        collegeName: 'IMS College of AhmedNagar, AhmedNagar',
         marks: '80 %',
         description: 'Details for item 1.',
       }
@@ -22,22 +22,33 @@ export class EducationComponent {
     {
       imgSrc: 'image1.jpg',
       label: 'Graduation',
-      duration: '2010-12',
+      duration: '2020-21',
       details: {
-        qualification: 'BCA (Master of Computer Application)',
-        collegeName: 'C T Bora College',
-        marks: '80 %',
+        qualification: 'BCA (Batchlor of Computer Application)',
+        collegeName: 'C T Bora College,Shirur',
+        marks: '73 %',
         description: 'Details for item 1.',
       }
     },
     {
       imgSrc: 'image1.jpg',
-      label: 'Item 1',
-      duration: '2010-12',
+      label: 'Higher Secondary',
+      duration: '2017-18',
       details: {
-        qualification: '10th (Master of Computer Application)',
-        collegeName: 'C T Bora College',
-        marks: '80 %',
+        qualification: '12th (HSC)',
+        collegeName: 'Shri Mulika Devi Jr.College,Nighoj',
+        marks: '53 %',
+        description: 'Details for item 1.',
+      }
+    },
+    {
+      imgSrc: 'image1.jpg',
+      label: 'Sedcondary School',
+      duration: '2015-16',
+      details: {
+        qualification: '10th (SSC)',
+        collegeName: 'Shri Mulika Devi Vidya Mandir, Nighoj',
+        marks: '72 %',
         description: 'Details for item 1.',
       }
     }
