@@ -14,9 +14,9 @@ export class ApiServiceService {
   contact(record: any) {
     record['Id'] = this.api.createId()
     this.api.collection('Contacts').add(record).then(() => {
-      this.toaster.success('Contact Added Successfully');
+      this.toaster.success('Contact Added Successfully', 'Contact Details');
     }).catch(err => {
-      this.toaster.error(err.message);
+      this.toaster.error(err.message, 'Contact Details');
     })
   }
   async getContacts() {
