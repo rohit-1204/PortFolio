@@ -1,20 +1,30 @@
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+<div class="m-1">
+    <div class="card mb-2">
+        <div class="card-body">
+            <h5 class="card-title text-center text-dark">Education Details</h5>
         </div>
     </div>
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+    <ngb-carousel #carousel (slide)="onSlide($event)" [interval]="0">
+        <ng-template ngbSlide *ngFor="let education of educations; index as i">
+            <div class="carousel-caption">
+                <h3> {{education.label}}</h3>
+                <p>This carousel uses customized default values.</p>
+
             </div>
-        </div>
-    </div>
+            <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+                <div class="picsum-img-wrapper">
+                    <img class="img-fluid" src="../../../assets/app.jpg" alt="">
+                </div>
+            </a>
+        </ng-template>
+    </ngb-carousel>
+
+
+    <ul class="list-group mt-3" *ngFor="let detail of educationDetails; index as i">
+        <li class="list-group-item ">Qualification : {{detail.qualification}}</li>
+        <li class="list-group-item">College : {{detail.collegeName}}</li>
+        <li class="list-group-item"> Percentage :{{detail.marks}}</li>
+        <li class="list-group-item"> Description : {{detail.description}}</li>
+        <!-- <li class="list-group-item">{{detail.qualification}}</li> -->
+    </ul>
 </div>
