@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api-service.service';
+import emailjs from '@emailjs/browser';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -26,7 +28,7 @@ export class ContactComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       this.showSuccess = true
-      console.log(this.contactForm.value);
+      this.sendEmail(this.contactForm.value);
       this.apiService.contact(this.contactForm.value)
       setTimeout(() => {
         this.showSuccess = false
@@ -37,5 +39,17 @@ export class ContactComponent {
       }, 1000);
 
     }
+  }
+  sendEmail(form: any) {
+    emailjs.init('I709n2wKFFvSlaYVP');
+    emailjs.send("service_jbj7kmt", "template_fg1duy1", {
+      from_firstName: form.firstName,
+      from_lastName: form.lastName,
+      from_email: form.email,
+      from_phone: form.phone,
+      from_message: form.message,
+    },);
+
+
   }
 }
