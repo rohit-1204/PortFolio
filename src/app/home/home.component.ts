@@ -8,12 +8,13 @@ import Typewriter from 't-writer.js'
 export class HomeComponent implements OnInit {
   @ViewChild('textStatic') textStatic: { nativeElement: any; } | undefined;
   @ViewChild('textTyping') textTyping: { nativeElement: any; } | undefined;
+  aboutMe: string;
 
   // arrIntroduction: Array<string> = PortfolioHelper.arrIntroduction;
   constructor() { }
 
   ngOnInit(): void {
-
+    this.aboutMe = `${"I'm a passionate Angular UI developer with 2 years of experience. Proficient in Angular, TypeScript, and modern web technologies, I create dynamic and responsive user interfaces. With a strong foundation in computer science and a knack for problem-solving, I'm dedicated to crafting seamless digital experiences. Let's bring your ideas to life."}`
   }
 
   ngAfterViewInit() {
@@ -69,5 +70,15 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  openMail() {
+    const recipient = 'rohitpathare1204@gmail.com';
+    const subject = 'Hiring Inquiry';
+    const body = 'Hello Rohit,';
+    const attachment = './../../assets/Rohit Pathare Angular Dev 1 - Junior.pdf';
+    const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}&attachment=${encodeURIComponent(attachment)}`;
 
+    window.location.href = mailtoUrl;
+  }
 }
