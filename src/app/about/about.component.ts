@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  ngOnINit() {
-
+  message: string;
+  ngOnInit() {
+    this.message = `${"I have a deep passion for innovation and a relentless pursuit of knowledge. I approach challenges with a positive attitude and a determination to find solutions swiftly. I am highly conscientious about how I manage my time and approach my work."}`
   }
   copyToClipBoard(text: string, p?: any) {
     if (p) {

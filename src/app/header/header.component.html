@@ -1,55 +1,76 @@
-<nav class="navbar navbar-light navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;"> 
-<div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
-        (click)="isCollapsed = !isCollapsed">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar sticky-top navbar-light navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+            (click)="isCollapsed = !isCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
-        <ul class="navbar-nav ml-auto container-fluid">
-            <li class="nav-item me-4">
-                <a class="nav-link active" [routerLink]="['/home']"
-                    routerLinkActive="active text-warning border-danger border-bottom">Home</a>
-            </li>
-            <li class="nav-item me-4">
-                <a class="nav-link active" [routerLink]="['/about']"
-                    routerLinkActive="active text-warning border-danger border-bottom">About</a>
-            </li>
-            <li class="nav-item me-4">
-                <a class="nav-link active" [routerLink]="['/experiance']"
-                    routerLinkActive="active text-warning border-danger border-bottom">Experience </a>
-            </li>
-            <li class="nav-item me-4">
-                <a class="nav-link active" [routerLink]="['/skills']"
-                    routerLinkActive="active text-warning border-danger border-bottom">Skills</a>
-            </li>
-            <li class="nav-item me-4">
-                <a class="nav-link" [routerLink]="['/project']"
-                    routerLinkActive="active text-warning border-danger border-bottom">Projects</a>
-            </li>
-            <li class="nav-item me-4">
-                <a class="nav-link" [routerLink]="['/education']"
-                    routerLinkActive="active text-warning border-danger border-bottom">Education</a>
-            </li>
-            <li class="nav-item me-4">
-                <a class="nav-link" [routerLink]="['/contact']"
-                    routerLinkActive="active text-warning border-danger border-bottom">Contact Me</a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
+            <ul class="navbar-nav ml-auto container-fluid">
+                <li class="nav-item me-4">
+                    <a class="nav-link active" href="#home"
+                        routerLinkActive="active text-warning border-danger border-bottom">Home</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link active" href="#about"
+                        routerLinkActive="active text-warning border-danger border-bottom">About</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link active" href="#experience"
+                        routerLinkActive="active text-warning border-danger border-bottom">Experience </a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link active" href="#skills"
+                        routerLinkActive="active text-warning border-danger border-bottom">Skills</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#projects"
+                        routerLinkActive="active text-warning border-danger border-bottom">Projects</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#eduaction"
+                        routerLinkActive="active text-warning border-danger border-bottom">Education</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#contact"
+                        routerLinkActive="active text-warning border-danger border-bottom">Contact Me</a>
+                </li>
+            </ul>
 
-        <form class="form-inline my-2 my-lg-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                    <div class="col-sm">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <div class="col-sm">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 </nav>
+<div id="home">
+    <app-home></app-home>
+</div>
+<div id="about">
+    <app-about></app-about>
+</div>
+<div id="experience">
+    <app-experience></app-experience>
+</div>
+<div id="skills">
+    <app-skills></app-skills>
+</div>
+<div id="projects">
+    <app-projects></app-projects>
+</div>
+<div id="eduaction">
+    <app-education></app-education>
+</div>
+<div id="contact">
+    <app-contact></app-contact>
+</div>

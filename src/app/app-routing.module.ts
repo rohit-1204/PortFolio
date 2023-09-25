@@ -15,28 +15,6 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 const routes: Routes = [
   //-- Home Page
   { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'experiance', component: ExperienceComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'project', component: ProjectsComponent },
-  { path: 'education', component: EducationComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'admin', component: AdminLoginComponent },
-  {
-    path: 'contact-details', component: ContactDetailsComponent,
-  },
-  {
-    path: 'dashboard', component: DashboardComponent,
-    children: [
-      {
-        path: 'contact-details',
-        component: ContactDetailsComponent
-      },
-
-      // Add more child routes as needed
-    ],
-  },
 
 ];
 
