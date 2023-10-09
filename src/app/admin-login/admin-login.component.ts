@@ -29,4 +29,6 @@ export class AdminLoginComponent {
       this.auth.adminLogin(this.contactForm.value.userName, this.contactForm.value.password)
     }
   }
+  // netlify pas
+  // Peterportfolio
 }
