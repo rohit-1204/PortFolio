@@ -94,11 +94,10 @@ export class AboutComponent {
   }
   downloadResume() {
     this.toasterService.success('Resume Download Successfully !', 'Resume', { positionClass: 'toast-bottom-center' })
-
-    // const attachment = './../../assets/Rohit Pathare Angular Dev 1 - Junior.pdf';
-    // var anchor = document.createElement('a');
-    // anchor.href = attachment;
-    // anchor.download = 'Rohit Pathare Resume.pdf';
-    // anchor.click();
+    const attachment = './../../assets/Rohit Pathare Angular Dev 1 - Junior.pdf';
+    var anchor = document.createElement('a');
+    anchor.href = attachment;
+    anchor.download = 'Rohit Pathare Resume.pdf';
+    anchor.click();
   }
 }
