@@ -9,52 +9,39 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
 export class EducationComponent {
   educations: any[] = [
     {
-      imgSrc: 'image1.jpg',
       label: 'Post Graduation',
       duration: '2022-23',
-      details: {
-        qualification: 'MCA (Master of Computer Application)',
-        collegeName: 'IMS College of AhmedNagar, AhmedNagar',
-        marks: '80 %',
-        description: 'Details for item 1.',
-      }
+      qualification: 'MCA (Master of Computer Application)',
+      collegeName: 'IMS College of AhmedNagar, AhmedNagar',
+      marks: '80 %',
+      description: 'Attaining a masters degree or professional certification relevant to my career goals, Conducting original research or projects that contribute to my fields knowledge base, Establishing connections with industry professionals and experts.',
     },
     {
-      imgSrc: 'image1.jpg',
       label: 'Graduation',
       duration: '2020-21',
-      details: {
-        qualification: 'BCA (Batchlor of Computer Application)',
-        collegeName: 'C T Bora College,Shirur',
-        marks: '73 %',
-        description: 'Details for item 1.',
-      }
+      qualification: 'BCA (Batchlor of Computer Application)',
+      collegeName: 'C T Bora College,Shirur',
+      marks: '73 %',
+      description: 'Earning a bachelors degree with distinction in my chosen field, Participating in research projects and internships, gaining practical experience, Building a strong academic network and engaging with professors and peers to broaden my perspectives.',
+
     },
     {
-      imgSrc: 'image1.jpg',
       label: 'Higher Secondary',
       duration: '2017-18',
-      details: {
-        qualification: '12th (HSC)',
-        collegeName: 'Shri Mulika Devi Jr.College,Nighoj',
-        marks: '53 %',
-        description: 'Details for item 1.',
-      }
+      qualification: '12th (HSC)',
+      collegeName: 'Shri Mulika Devi Jr.College,Nighoj',
+      marks: '53 %',
+      description: 'Excelling in advanced coursework, particularly in subjects aligned with my career aspirations, Leadership roles in student organizations and projects, honing my organizational and teamwork skills. Exploring potential career paths and developing a clearer vision for my future academic pursuits.',
     },
     {
-      imgSrc: 'image1.jpg',
       label: 'Sedcondary School',
       duration: '2015-16',
-      details: {
-        qualification: '10th (SSC)',
-        collegeName: 'Shri Mulika Devi Vidya Mandir, Nighoj',
-        marks: '72 %',
-        description: 'Details for item 1.',
-      }
+      qualification: '10th (SSC)',
+      collegeName: 'Shri Mulika Devi Vidya Mandir, Nighoj',
+      marks: '72 %',
+      description: 'Graduating with honors, demonstrating a strong work ethic and dedication to excellence, Active involvement in extracurricular activities, such as sports, clubs, and community service, Gaining a solid understanding of fundamental subjects, which formed the basis for my future studies',
     }
   ];
-  educationDetails = [];
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
   paused = false;
   unpauseOnArrow = false;
@@ -64,13 +51,6 @@ export class EducationComponent {
 
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel;
   ngOnInit() {
-    this.educationDetails = [this.educations[0].details]
   }
 
-  onSlide(slideEvent: NgbSlideEvent) {
-    if (slideEvent && slideEvent.current) {
-      let slide = this.educations[slideEvent.current.split('-')[2]].details;
-      this.educationDetails = [slide]
-    }
-  }
 }

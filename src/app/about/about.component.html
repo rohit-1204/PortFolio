@@ -1,8 +1,6 @@
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title text-center text-dark"> <i class="fas fa-user"></i>
-            About Me</h5>
-    </div>
+<div class="alert alert-info" role="alert">
+    <h5 class="card-title text-center text-dark"> <i class="fas fa-user"></i>
+        About Me</h5>
 </div>
 <div class="m-5">
     <div class="card border-secondary mb-3">
@@ -20,6 +18,10 @@
 
                     </ul>
                     <p class="card-text">{{message}}</p>
+                    <button (click)="downloadResume()" type="button" class="m-3 btn btn-outline-success"><i
+                            class="me-2 fas fa-download"></i>Download
+                        CV</button>
+
                 </div>
                 <div class="basic-info col">
                     <h5 class="card-title text-dark">Basic Information</h5>
@@ -28,7 +30,7 @@
                             <h6 class="font-weight-bold">DATE OF BIRTH :</h6>
                             27 Jully 2000
                         </li>
-                        <li class="list-group-item">
+                        <li class="list-group-item" (click)="openDilarPad()">
                             <h6 class="font-weight-bold">PHONE :</h6> +91 9561661204
                             <ng-template #popContent>
                                 <div class="popover-content">
@@ -38,7 +40,7 @@
                             <i title="copy" #phonePopover="ngbPopover" [ngbPopover]="popContent" popoverTitle=""
                                 class="fas fa-clipboard ms-1" (click)="copyToClipBoard('phone',phonePopover)"></i>
                         </li>
-                        <li class="list-group-item">
+                        <li class="list-group-item" (click)="openMailWindow()">
                             <h6 class="font-weight-bold">EMAIL :</h6>
                             <ng-template #popContent>
                                 <div class="popover-content">
@@ -49,7 +51,7 @@
                                 [ngbPopover]="popContent" popoverTitle="" class="fas fa-clipboard ms-1"
                                 (click)="copyToClipBoard('email',emailPopover)"></i>
                         </li>
-                        <li class="list-group-item">
+                        <li class="list-group-item" (click)="navigateToGoogleMap()">
                             <h6 class="font-weight-bold">HOME ADDRESS :</h6>
                             <ng-template #popContent>
                                 <div class="popover-content">
@@ -84,7 +86,7 @@
                                 <tr>
                                     <td class="border-0">
                                         <div class=" ">
-                                            <a href="https://www.linkedin.com/" target="_blank">
+                                            <a (click)="openLinkedIn()" target="_blank">
                                                 <i class="fab fa-linkedin fa-2x"></i>
                                             </a>
                                         </div>
@@ -106,21 +108,21 @@
                                     </td>
                                     <td class="border-0">
                                         <div class="col-2">
-                                            <a href="https://wa.me/your-instagram" target="_blank">
+                                            <a (click)="openInstaGram()" target="_blank">
                                                 <i class="fab fa-instagram fa-2x"></i>
                                             </a>
                                         </div>
                                     </td>
                                     <td class="border-0">
                                         <div class="col-2">
-                                            <a href="https://wa.me/your-whatsapp-number" target="_blank">
+                                            <a (click)="openWhatsApp()" target="_blank">
                                                 <i class="fab fa-whatsapp fa-2x"></i>
                                             </a>
                                         </div>
                                     </td>
                                     <td class="border-0">
                                         <div class="col-2">
-                                            <a href="https://wa.me/your-telegram-number" target="_blank">
+                                            <a (click)="openTelegramApp()" target="_blank">
                                                 <i class="fab fa-telegram fa-2x"></i>
                                             </a>
                                         </div>

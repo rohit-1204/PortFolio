@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+    setTimeout(() => {
+
+    }, 1000);
     this.aboutMe = `${"I'm a passionate Angular UI developer with 2 years of experience. Proficient in Angular, TypeScript, and modern web technologies, I create dynamic and responsive user interfaces. With a strong foundation in computer science and a knack for problem-solving, I'm dedicated to crafting seamless digital experiences. Let's bring your ideas to life."}`
   }
 

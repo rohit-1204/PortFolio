@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api-service.service';
 import emailjs from '@emailjs/browser';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,7 @@ import emailjs from '@emailjs/browser';
 export class ContactComponent {
   contactForm: FormGroup;
   showSuccess = false;
-  constructor(private fb: FormBuilder, private router: Router, private apiService: ApiService) { }
+  constructor(private fb: FormBuilder, private router: Router, private apiService: ApiService, private toasterService: ToastrService) { }
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -27,11 +28,10 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      this.showSuccess = true
+      this.toasterService.success('Contact Saved Successfully !', 'Contact Details', { positionClass: 'toast-bottom-center' })
       this.sendEmail(this.contactForm.value);
       this.apiService.contact(this.contactForm.value)
       setTimeout(() => {
-        this.showSuccess = false
         this.contactForm.reset();
         setTimeout(() => {
           this.router.navigate(['/home']);
