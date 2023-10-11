@@ -22,6 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { CertificationComponent } from './certification/certification.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     ContactComponent,
     AdminLoginComponent,
     DashboardComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    CertificationComponent
   ],
   imports: [
     BrowserModule,
