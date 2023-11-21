@@ -2,19 +2,10 @@
     <h5 class="card-title text-center text-dark"> <i class="fas fa-certificate"></i>
         Certification Details</h5>
 </div>
-<div class=" text-center">
-    <div class="row">
-        <div class="col">
-
-        </div>
-
-    </div>
-</div>
-
 <div class="m-5">
     <div class="row">
         <div class="col-md-3 mb-4" *ngFor="let certification of certifications">
-            <div class="card" style="width: 20rem;">
+            <div class="card">
                 <img [src]="certification.imgeUrl" class="card-img-top" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{certification.name}}</h5>

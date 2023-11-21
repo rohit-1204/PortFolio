@@ -17,11 +17,11 @@ export class ContactComponent {
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
-      phone: ['', Validators.required]
+      firstName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]+$/)]],
+      lastName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]+$/)]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)]],
+      message: ['', [Validators.required, Validators.max(100)]],
+      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]]
 
     });
   }
@@ -49,7 +49,5 @@ export class ContactComponent {
       from_phone: form.phone,
       from_message: form.message,
     },);
-
-
   }
 }

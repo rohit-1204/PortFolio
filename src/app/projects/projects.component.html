@@ -2,7 +2,7 @@
   <h5 class="card-title text-center text-dark"> <i class="fas fa-graduation-cap"></i>
     Project Details</h5>
 </div>
-<div class=" m-5">
+<div class="m-5">
   <div class="row">
     <div class="apps col-md-3 mb-4" *ngFor="let project of projects">
       <!-- Replace the content below with the project data you want to display -->
@@ -11,11 +11,12 @@
         <div class="card-body">
           <h5 class="card-title">{{ project.name }}</h5>
           <p class="card-text">{{ project.description }}</p>
-          <div class="text-center">
-            <a href="https://github.com/rohit-1204/Krishi-Agro-Agency" target="_blank"
-              class="btn btn-outline-success"><i class="fas fa-code me-2"></i>Open Source
-              Code</a>
-          </div>
+          <a href="https://github.com/rohit-1204/Krishi-Agro-Agency" target="_blank"
+            class="btn btn-outline-success me-2"><i class="fas fa-code me-2"></i>
+            Code</a>
+          <a href="https://github.com/rohit-1204/Krishi-Agro-Agency" target="_blank"
+            class="btn btn-outline-success me-2"><i class="fas fa-code me-2"></i>
+            Demo</a>
         </div>
       </div>
     </div>
