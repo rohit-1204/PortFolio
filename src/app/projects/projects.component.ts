@@ -7,19 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
   projects = [{
-    name: 'Agile Spring 1', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
+    name: 'Tic Tac Toe', buttonName: 'Play', imageSrc: './../../assets/TicTacToe.jpg', siteUrl: 'https://play-tic-tac-game.netlify.app/', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
   }, {
-    name: 'Agile Spring 2', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
+    name: 'Snake Game', buttonName: 'Play', imageSrc: './../../assets/snake.png', siteUrl: 'https://angular-snake-game.netlify.app/', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
   }, {
-    name: 'Agile Spring 3', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
-  }, {
-    name: 'Agile Spring 4', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
-  }, {
-    name: 'Agile Spring 5', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
-  }, {
-    name: 'Agile Spring 6', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
-  }, {
-    name: 'Agile Spring 7', description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
+    name: 'Online Test', buttonName: 'Demo',imageSrc: './../../assets/test2.png', siteUrl: 'https://exam-online.netlify.app/',description: 'Some quick example text to build on the card title and make up the bulk of the cards content.'
   }]
   constructor() {
 
